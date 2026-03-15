@@ -83,7 +83,7 @@ export default function PrivacyModal({ isOpen, onClose }: PrivacyModalProps) {
               </section>
 
               <div className="pt-6 text-sm text-slate-500 border-t border-white/5">
-                Última actualización: Marzo 2024
+                Última actualización: Marzo 2026
               </div>
             </div>
           </motion.div>
