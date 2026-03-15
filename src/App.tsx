@@ -5,9 +5,11 @@
 
 import { motion, useMotionValue, useSpring } from "motion/react";
 import { Zap, MessageSquare, FileText, ArrowRight, CheckCircle2 } from "lucide-react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import PrivacyModal from "./components/PrivacyModal";
 
 export default function App() {
+  const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
@@ -220,8 +222,16 @@ export default function App() {
           <p className="text-slate-500 text-sm">
             © {new Date().getFullYear()} Zarza Automation Studio. Todos los derechos reservados.
           </p>
+          <button 
+            onClick={() => setIsPrivacyOpen(true)}
+            className="text-slate-500 hover:text-blue-400 text-sm transition-colors"
+          >
+            Política de Privacidad
+          </button>
         </div>
       </footer>
+
+      <PrivacyModal isOpen={isPrivacyOpen} onClose={() => setIsPrivacyOpen(false)} />
     </div>
   );
 }
