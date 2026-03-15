@@ -197,7 +197,7 @@ export default function App() {
               Filosofía Zarza Automation Studio
             </div>
             <p className="text-3xl md:text-5xl font-serif italic text-white leading-tight">
-              "Si lo repites, lo automatizo. Zarza Automation Studio."
+              "Si existe un patrón, existe una solución."
             </p>
           </motion.div>
         </div>
